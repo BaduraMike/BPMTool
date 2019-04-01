@@ -1,6 +1,10 @@
 package com.soft.mikessolutions.bpmtool.entities;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
+
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
@@ -10,13 +14,20 @@ public class Project {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @NotBlank(message = "Project Name is required")
     private String projectName;
+    @NotBlank(message = "Project Identifier is required")
+    @Size(min = 4, max = 6, message = "Please use 4 to 6 characters")
+    @Column(updatable = false, unique = true)
     private String projectIdentifier;
+    @NotBlank(message = "Project Description is required")
     private String description;
     private LocalDate startDate;
     private LocalDate endDate;
 
+    @JsonFormat(pattern = "yyyy-mm-dd" + " " + "hh:mm:ss")
     private LocalDateTime createdAt;
+    @JsonFormat(pattern = "yyyy-mm-dd" + " " + "hh:mm:ss")
     private LocalDateTime updatedAt;
 
     public Project() {
