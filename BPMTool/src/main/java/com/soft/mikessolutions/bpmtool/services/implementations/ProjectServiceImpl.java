@@ -1,6 +1,7 @@
 package com.soft.mikessolutions.bpmtool.services.implementations;
 
 import com.soft.mikessolutions.bpmtool.entities.Project;
+import com.soft.mikessolutions.bpmtool.exceptions.ProjectIdException;
 import com.soft.mikessolutions.bpmtool.exceptions.ProjectNotFoundException;
 import com.soft.mikessolutions.bpmtool.repositories.ProjectRepository;
 import com.soft.mikessolutions.bpmtool.services.ProjectService;
@@ -29,7 +30,12 @@ public class ProjectServiceImpl implements ProjectService {
 
     @Override
     public Project save(Project project) {
-        return projectRepository.save(project);
+        try {
+            project.setProjectIdentifier(project.getProjectIdentifier().toUpperCase());
+            return projectRepository.save(project);
+        } catch (Exception ex) {
+            throw new ProjectIdException("Project ID '" + project.getProjectIdentifier().toUpperCase() + "' already exists.");
+        }
     }
 
     @Override
