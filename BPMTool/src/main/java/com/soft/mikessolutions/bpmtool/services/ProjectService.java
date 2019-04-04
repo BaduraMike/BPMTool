@@ -5,4 +5,6 @@ import org.springframework.stereotype.Service;
 
 @Service
 public interface ProjectService extends CrudService<Project, Long> {
+
+Project findByProjectIdentifier(String projectIdentifier);
 }

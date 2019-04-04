@@ -25,7 +25,7 @@ public class ProjectServiceImpl implements ProjectService {
     @Override
     public Project findById(Long id) {
         return projectRepository.findById(id)
-                .orElseThrow(() -> new ProjectNotFoundException(id));
+                .orElseThrow(() -> new ProjectNotFoundException("Project with ID '" + id + "' is not found."));
     }
 
     @Override
@@ -46,5 +46,11 @@ public class ProjectServiceImpl implements ProjectService {
     @Override
     public void deleteById(Long id) {
         projectRepository.deleteById(id);
+    }
+
+    @Override
+    public Project findByProjectIdentifier(String projectIdentifier) {
+        return projectRepository.findByProjectIdentifier(projectIdentifier.toUpperCase())
+                .orElseThrow(() -> new ProjectNotFoundException("Project with IDENTIFIER '" + projectIdentifier.toUpperCase() + "' is not found."));
     }
 }
