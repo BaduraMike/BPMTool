@@ -25,9 +25,9 @@ public class Project {
     private LocalDate startDate;
     private LocalDate endDate;
 
-    @JsonFormat(pattern = "yyyy-mm-dd" + " " + "hh:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd" + " " + "hh:mm:ss")
     private LocalDateTime createdAt;
-    @JsonFormat(pattern = "yyyy-mm-dd" + " " + "hh:mm:ss")
+    @JsonFormat(pattern = "yyyy-MM-dd" + " " + "hh:mm:ss")
     private LocalDateTime updatedAt;
 
     public Project() {
