@@ -39,13 +39,19 @@ public class ProjectServiceImpl implements ProjectService {
     }
 
     @Override
-    public void delete(Project project) {
-        projectRepository.delete(project);
-    }
+    public void delete(Project project) { projectRepository.delete(project); }
 
     @Override
     public void deleteById(Long id) {
         projectRepository.deleteById(id);
+    }
+
+    @Override
+    public void deleteByProjectIdentifier(String projectIdentifier) {
+        Project projectToDelete = projectRepository.findByProjectIdentifier(projectIdentifier.toUpperCase())
+                .orElseThrow(() -> new ProjectNotFoundException("Project with IDENTIFIER '" + projectIdentifier.toUpperCase() + "' is not found."));
+
+        projectRepository.delete(projectToDelete);
     }
 
     @Override
