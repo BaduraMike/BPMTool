@@ -1,4 +1,5 @@
 import React, {Component, PropTypes} from 'react';
+import ProjectItem from "./Project/ProjectItem";
 
 class Dashboard extends Component {
     propTypes = {};
@@ -7,7 +8,11 @@ class Dashboard extends Component {
 
     render() {
         return (
-            <h4>Welcome to the Dashboard</h4>
+            <div>
+            <h4 className={"alert alert-warning"}>That is the Dashboard</h4>
+            <ProjectItem/>
+            <ProjectItem/>
+            </div>
         );
     }
 }
