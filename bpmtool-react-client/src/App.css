@@ -19,8 +19,20 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.flex-container {
+  display: table;
+  flex-wrap: nowrap;
+  background-color: skyblue;
+  margin: auto;
+}
+
+.flex-container > div {
+  background-color: teal;
+  width: fit-content;
+  padding: 5px;
+  margin: 10px;
+  text-align: center;
+  font-size: calc(20px + 10vmin);
 }
 
 @keyframes App-logo-spin {
@@ -30,4 +42,75 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+img {
+  width: 100%;
+}
+
+.list-group {
+  font-style: oblique;
+}
+
+.navbar {
+  background-color: #e3f2fd;
+  width: calc(100% - 80px);
+}
+.fa.fa-edit {
+  color: #18a2b9;
+}
+
+.list-group-item.delete:hover {
+  cursor: -webkit-grab;
+  background-color: pink;
+}
+
+.list-group-item.update:hover {
+  cursor: -webkit-grab;
+  background-color: gainsboro;
+}
+
+.list-group-item.board:hover {
+  cursor: -webkit-grab;
+  background-color: gainsboro;
+}
+
+.fa.fa-minus-circle {
+  color: red;
+}
+
+.landing {
+  position: relative;
+  /* background: url("../img/showcase.jpg") no-repeat; */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  margin-top: -24px;
+  margin-bottom: -50px;
+}
+
+.landing-inner {
+  padding-top: 80px;
+}
+
+.dark-overlay {
+  background-color: rgba(0, 0, 0, 0.7);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.card-form {
+  opacity: 0.9;
+}
+
+.latest-profiles-img {
+  width: 40px;
+  height: 40px;
+}
+
+.form-control::placeholder {
+  color: #bbb !important;
 }
