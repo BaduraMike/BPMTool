@@ -1,5 +1,7 @@
 .App {
   text-align: center;
+  font-style: normal;
+  font-family: Calibri
 }
 
 .App-logo {
@@ -14,7 +16,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   font-size: calc(10px + 2vmin);
   color: white;
 }
@@ -48,16 +50,17 @@ img {
   width: 100%;
 }
 
-.list-group {
-  font-style: oblique;
-}
-
 .navbar {
   background-color: #e3f2fd;
   width: calc(100% - 80px);
 }
 .fa.fa-edit {
   color: #18a2b9;
+}
+
+.list-group-item {
+  font-family: Calibri;
+  font-weight: bolder;
 }
 
 .list-group-item.delete:hover {
@@ -114,3 +117,8 @@ img {
 .form-control::placeholder {
   color: #bbb !important;
 }
+
+.mx-auto {
+  font-weight: bold;
+}
+
