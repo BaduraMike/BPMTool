@@ -1,13 +1,25 @@
-import React, {Component, PropTypes} from 'react';
+import React, {Component} from 'react';
+import ProjectItem from "./Project/ProjectItem";
 
 class Dashboard extends Component {
-    propTypes = {};
-
-    defaultProps = {};
-
     render() {
         return (
-            <h4>Welcome to the Dashboard</h4>
+            <div className="projects">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-md-12">
+                            <h1 className="display-4 text-center">Projects</h1>
+                            <br/>
+                            <a href="ProjectForm.html" className="btn btn-lg btn-info">
+                                Create a Project
+                            </a>
+                            <br/>
+                            <hr/>
+                        </div>
+                        <ProjectItem/>
+                    </div>
+                </div>
+            </div>
         );
     }
 }
