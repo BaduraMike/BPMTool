@@ -3,6 +3,11 @@
   <component name="issues">
     <option name="index">
       <map>
+        <entry key="$PROJECT_DIR$/../BPMTool/src/main/java/com/soft/mikessolutions/bpmtool/controllers/ProjectController.java">
+          <value>
+            <set />
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/.gitignore">
           <value>
             <set />
@@ -24,6 +29,16 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/App.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/actions/projectActions.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/actions/types.js">
           <value>
             <set />
           </value>
@@ -54,6 +69,11 @@
           </value>
         </entry>
         <entry key="$PROJECT_DIR$/src/index.js">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/reducers/errorReducer.js">
           <value>
             <set />
           </value>
